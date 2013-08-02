@@ -9,3 +9,6 @@ class CreateLinks < ActiveRecord::Migration
     end
   end
 end
+
+
+# By default, Rails expects foreign keys to end with _id and begin with the model name it is referencing. So for a foreign key that points at the user model, we can name it user_id. - Learn/week5/readit/part-2
