@@ -1,0 +1,22 @@
+%h1 A link NEW page
+
+= form_for(@link) do |l|
+	- if @link.errors.any?
+		%h2= pluralize(@link.errors.count, "error") + "prohibited this link from being saved:"
+		%ul
+			- @link.errors.full_messages.each do |msg|
+				%li= msg
+	.field
+		= l.label :title
+		%br
+	.field
+		= l.text_field :title
+		%br
+	.field
+		= l.label :url
+		%br
+	.field
+		= l.text_field :url
+		%br
+
+	.actions= l.submit

@@ -2,10 +2,21 @@ Readit3::Application.routes.draw do
   # Devise gem creates the CRUD behind the scenes for the user model:
   devise_for :users
 
-  # pages refers to webpages (ie: Home, About, etc.)
+  # Resourceful route for pages ('pages' refer to webpages (ie: Home, About, etc.)
   resources :pages
+
   # Homepage:
   root to: "pages#index"
+
+  get '/links/new' => 'links#new'
+  post '/links' => 'links#create'
+  get '/links/:id' => 'links#show'
+  get '/links/:id/edit' => 'links#edit'
+  put '/links/:id' => 'links#update'
+  delete '/links/:id' => 'links#destroy'
+
+
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
