@@ -8,13 +8,13 @@ Readit3::Application.routes.draw do
   # Homepage:
   root to: "pages#index"
 
+
   get '/links/new' => 'links#new'
-  post '/links' => 'links#create'
-  get '/links/:id' => 'links#show'
+  post '/links' => 'links#create', as: 'links'
+  get '/links/:id' => 'links#show', as: 'link_show'
   get '/links/:id/edit' => 'links#edit'
   put '/links/:id' => 'links#update'
   delete '/links/:id' => 'links#destroy'
-
 
 
   

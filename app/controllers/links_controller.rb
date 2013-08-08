@@ -4,12 +4,17 @@ class LinksController < ApplicationController
   	@link = Link.new
   end
 
-  def show
-
+  def create
+  	@link = Link.new(params[:post])
+  	if @link.save
+ 	  	redirect_to link_show_path(@link.id), notice: "Link added successfully"
+ 	  else
+ 	  	render action: 'new'
+ 	  end
   end
 
-  def create
-  	
+  def show
+  	@link = Link.find(params[:id])
   end
 
   def edit
