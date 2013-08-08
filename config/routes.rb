@@ -1,4 +1,5 @@
 Readit3::Application.routes.draw do
+  # Devise gem creates the CRUD behind the scenes for the user model:
   devise_for :users
 
   # pages refers to webpages (ie: Home, About, etc.)
