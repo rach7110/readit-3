@@ -1,7 +1,9 @@
 Readit3::Application.routes.draw do
   devise_for :users
 
+  # pages refers to webpages (ie: Home, About, etc.)
   resources :pages
+  # Homepage:
   root to: "pages#index"
   
   # The priority is based upon order of creation:
