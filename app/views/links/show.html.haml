@@ -1,4 +1,8 @@
-%h1 A link SHOW page
+%h1 Link!
+=link_to 'Home', links_path
+%br
+%br
 
-%p= @link.title
-%p= @link.url
+%table
+	%tr
+		%td= link_to @link.title, @link.url
