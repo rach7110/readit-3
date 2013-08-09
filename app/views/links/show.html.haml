@@ -3,6 +3,6 @@
 %br
 %br
 
-%table
-	%tr
-		%td= link_to @link.title, @link.url
+%p= link_to @link.title, @link.url
+%br
+%p= link_to 'Edit', links_edit_path(@link)
