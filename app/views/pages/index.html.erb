@@ -2,3 +2,7 @@
 <h5>Created by: Rachel Loziuk</h5>
 
 <%= link_to "New Link", new_link_path %>
+<%= @links.each do |x| %>
+	<%= x.title %>
+<% end %>
+

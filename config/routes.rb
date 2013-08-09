@@ -9,7 +9,7 @@ Readit3::Application.routes.draw do
   root to: "pages#index"
 
 
-  get '/links/new' => 'links#new'
+  get '/links/new' => 'links#new', as: 'new_link'
   post '/links' => 'links#create', as: 'links'
   get '/links/:id' => 'links#show', as: 'link_show'
   get '/links/:id/edit' => 'links#edit'
