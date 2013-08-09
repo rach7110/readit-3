@@ -1,7 +1,5 @@
-<h2>Readit!</h2>
-<h5>Created by: Rachel Loziuk</h5>
-
-/ <!-- List all the exisiting links -->
+= link_to "New Link", new_link_path
+</br>
 - @links.each do |x|
 	= link_to x.title, link_show_path(x.id)
 

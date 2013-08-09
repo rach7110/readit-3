@@ -11,3 +11,59 @@
  *= require_self
  *= require_tree .
  */
+*{
+	margin: 0px;
+}
+
+body {
+	font-family: 'Arial';
+	padding: 10px;
+ }
+
+/*background image: two options; change the id name in applicaiton.html.haml to switch*/
+#slash-it-2X { 
+	background-image: url('/assets/slash_it/slash_it_@2X.png');
+	color: white;
+}
+
+#slash-it-2X.banner{
+	border: 5px #960E00 solid;
+	text-align: center;
+	color: #960E00;
+	background-color: #960E00;
+}
+
+#triangular { 
+	background-image: url('/assets/triangular/triangular.png');
+	color: blue;
+}
+
+/*Kuler color theme: 'Copy All Over You'*/
+#triangular .banner{
+	border: 5px #DC8D61 solid;
+	text-align: center;
+	color: #94CFBE;
+	background-color: #E05992;
+}
+
+.banner{
+	font-family: 'Londrina Shadow', cursive;
+	font-size: 40px;
+	margin: 15px;
+	padding: 5px;
+}
+
+.banner p{
+	font-size: 30px;
+}
+
+#login {
+	text-align: right;
+	font-family: 'Londrina Shadow', cursive;
+}
+
+/*Main content styling*/
+.main h1{
+	font-family: 'Londrina Shadow', cursive;
+}
+

@@ -2,25 +2,35 @@
 	<html>
 		<head>
 			<!-- TODO: add specific page title to title tag using scopes -->
-			<title>Readit</title>
+			<title>Readit: be-cum brite</title>
+			<link href='http://fonts.googleapis.com/css?family=Londrina+Outline|Londrina+Shadow' rel='stylesheet' type='text/css'>
 			<%= stylesheet_link_tag    "application", :media => "all" %>
 			<%= javascript_include_tag "application" %>
 			<%= csrf_meta_tags %>
 		</head>
 
-		<body>
-			<%# user is logged in, show log out link; destroy_user_seesion is a Devise helper %>
-			<% if current_user.present? %>
-		  	<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-			<%# user is not logged in, show signup and login links; new_user_session is a Devise helper %>
-			<% else %>
-		    	<%= link_to 'Sign In', new_user_session_path %> |
-		    	<%= link_to 'Register Now', new_user_registration_path %>
-			<% end %>
-		  	<p class="notice"><%= notice %></p>
-		  	<p class="alert"><%= alert %></p>
+		<body id="triangular">
 
-			<%= yield %>
+			<div class="banner">READIT
+				<p>be-cum brite</p>
+			</div>
+			
+			<%# user is logged in, show log out link; destroy_user_seesion is a Devise helper %>
+			<div id="login">
+				<% if current_user.present? %>
+					<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+					<%# user is not logged in, show signup and login links; new_user_session is a Devise helper %>
+					<% else %>
+						<%= link_to 'Sign In', new_user_session_path %> |
+						<%= link_to 'Register Now', new_user_registration_path %>
+				<% end %>
+				<p class="notice"><%= notice %></p>
+				<p class="alert"><%= alert %></p>
+			</div>
+
+			<div class="main">
+				<%= yield %>
+			</div>
 
 		</body>
 	</html>
