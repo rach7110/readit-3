@@ -15,10 +15,10 @@ Readit3::Application.routes.draw do
 
   get '/links/:id' => 'links#show', as: 'link_show'
 
-  get '/links/:id/edit' => 'links#edit', as: 'links_edit'
-  put '/links/:id' => 'links#update'
+  get '/links/:id/edit' => 'links#edit', as: 'link_edit'
+  post '/links/:id/edit' => 'links#update'
 
-  delete '/links/:id' => 'links#destroy'
+  delete '/links/:id' => 'links#destroy', as: 'link_delete'
 
 
   

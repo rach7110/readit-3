@@ -19,7 +19,6 @@ class LinksController < ApplicationController
 
   def show
   	@link = Link.find(params[:id])
-
   end
 
   def edit
@@ -27,9 +26,20 @@ class LinksController < ApplicationController
   end
 
   def update
+    @link = Link.find(params[:id])
+
+    if @link.update_attributes(params[:link])
+      redirect_to link_show_path(@link), notice: "Link was updated successfully"
+    else
+      render 'link_edit'
+    end 
   end
 
   def destroy
+    @link = Link.find(params[:id])
+    @link.destroy
+    # Don't need to add a view for this action since we're redirecting to the index action
+    redirect_to links_path, alert: "Are you sure?"
   end
 
 end

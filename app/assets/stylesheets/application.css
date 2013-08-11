@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require_tree .
- */
+ */ 
 
 
 /* -------------------Reset default margin & padding--------------- */
@@ -69,17 +69,16 @@ Two options; change the id name in applicaiton.html.haml to switch*/
 
 /* -------------------------Login/Register--------------------------- */
 #login {
-	text-align: right;
 	font-family: 'Londrina Shadow', cursive;
 	font-weight: bold;
+	text-align: right;
 }
 
 /* --------------------------Main content ----------------------------*/
 .main{
-	text-align: center;
+/*	text-align: center;*/
 }
 
 .main h1{
 	font-family: 'Londrina Shadow', cursive;
 }
-

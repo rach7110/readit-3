@@ -1,8 +1,6 @@
 %h1 Link!
-=link_to 'Home', links_path
-%br
 %br
 
 %p= link_to @link.title, @link.url
 %br
-%p= link_to 'Edit', links_edit_path(@link)
+%p= link_to 'Edit', link_edit_path(@link)

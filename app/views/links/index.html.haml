@@ -1,10 +1,24 @@
 = link_to "New Link", new_link_path
-</br>
+%br
+%br
+
+%table
+	%tr
+		%th="Title"
+		%th="URL"
+		%th
+		%th
 
 - @links.each do |x|
-	= link_to x.title, link_show_path(x.id)
-	</br>
-	</br>
+	%tr 
+		%td= x.title
+		%td= link_to x.url, x.url
+		%td= link_to 'Show', link_show_path(x.id)
+		%td= link_to 'Edit', link_edit_path(x.id)
+		/ %td= link_to 'Delete', x, :method => :delete, :data => { :confirm => "Are you sure?"}
+		%br
+
+
 
 
 

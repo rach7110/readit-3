@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<!-- TODO: add specific page title to title tag using scopes -->
-			<title>Readit: be-cum brite</title>
+			<title>Readit</title>
 			<link href='http://fonts.googleapis.com/css?family=Londrina+Outline|Londrina+Shadow' rel='stylesheet' type='text/css'>
 			<%= stylesheet_link_tag    "application", :media => "all" %>
 			<%= javascript_include_tag "application" %>
@@ -15,20 +14,27 @@
 				<p id="tagline">be-cum brite</p>
 			</div>
 			
-			<%# user is logged in, show log out link; destroy_user_seesion is a Devise helper %>
+			<a href="/">Home</a>
+
 			<div id="login">
+				<%# user is logged in, show log out link; destroy_user_seesion is a Devise helper %>
+				<span>
 				<% if current_user.present? %>
 					<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-					<%# user is not logged in, show signup and login links; new_user_session is a Devise helper %>
+					<%# user is not logged in, show signup and login links; new_user_session is a Devisehelper %>
 					<% else %>
 						<%= link_to 'Sign In', new_user_session_path %> |
 						<%= link_to 'Register Now', new_user_registration_path %>
 				<% end %>
-				<p class="notice"><%= notice %></p>
-				<p class="alert"><%= alert %></p>
+				</span>
+				</div>
+
 			</div>
 
 			<div class="main">
+				<p id="notice"><%= notice %></p>
+				</br>
+				<p id="alert"><%= alert %></p>
 				<%= yield %>
 			</div>
 
