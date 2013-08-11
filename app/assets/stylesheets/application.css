@@ -11,8 +11,10 @@
  *= require_self
  *= require_tree .
  */
+/*Resets default margin & padding*/
 *{
 	margin: 0px;
+	padding: 0px;
 }
 
 body {
