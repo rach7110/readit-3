@@ -1,0 +1,11 @@
+= form_for :link do |y|
+	=y.label :title
+	=y.text_field :title
+	%br
+	%br
+	= y.label :url
+	= y.text_area :url, rows: 4
+	%br
+	= y.submit "UPDATE!"
+
+	= link_to 'Back', links_path

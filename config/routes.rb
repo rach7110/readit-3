@@ -6,15 +6,21 @@ Readit3::Application.routes.draw do
   resources :pages
 
   # Homepage:
-  root to: "pages#index"
+  root to: "links#index"
 
 
-  get '/links/new' => 'links#new', as: 'new_link'
+  get '/links' => 'links#index', as: 'links'
+  #new_link_path (links/new) OR new_link_url (http://readit.com/links/new)
+  get '/links/new' => 'links#new', as: 'new_link' 
   post '/links' => 'links#create', as: 'links'
+
   get '/links/:id' => 'links#show', as: 'link_show'
-  get '/links/:id/edit' => 'links#edit'
-  put '/links/:id' => 'links#update'
-  delete '/links/:id' => 'links#destroy'
+
+  get '/links/:id/edit' => 'links#edit', as: 'link_edit'
+  post '/links/:id/edit' => 'links#update'
+
+  delete '/links/:id' => 'links#destroy', as: 'link_delete'
+
 
 
   

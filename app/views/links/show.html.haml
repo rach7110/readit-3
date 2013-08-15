@@ -1,1 +1,6 @@
-%h1 A link SHOW page
+%h1 Link!
+%br
+
+%p= link_to @link.title, @link.url
+%br
+%p= link_to 'Edit', link_edit_path(@link)
