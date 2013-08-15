@@ -10,4 +10,75 @@
  *
  *= require_self
  *= require_tree .
- */
+ */ 
+
+
+/* -------------------Reset default margin & padding--------------- */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ---------------------Body ecapsulates everything ---------------- */
+body {
+	font-family: 'Arial';
+	padding: 20px;
+}
+
+/*----------------------Background image; font: -----------------------
+Two options; change the id name in applicaiton.html.haml to switch*/
+#slash-it-2X { 
+	background-image: url('/assets/slash_it/slash_it_@2X.png');
+	color: white;
+}
+
+#triangular { 
+	background-image: url('/assets/triangular/triangular.png');
+	color: blue;
+}
+
+/* -----------------------------Banner----------------------------- */
+/* Two options; change the id name in applicaiton.html.haml to switch*/
+
+/*Option 1: Kuler color theme: 'Copy All Over You'*/
+#triangular .banner{
+	margin-bottom: 10px;
+	padding: 5px;
+	font-family: 'Londrina Shadow', cursive;
+	font-size: 40px;
+	color: black;
+	border: 5px #DC8D61 solid;
+	background-color: #E05992;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*Option 2:*/
+#slash-it-2X .banner{
+	border: 5px #960E00 solid;
+	text-align: center;
+	color: #960E00;
+	background-color: #960E00;
+	font-weight: bold;
+}
+
+#tagline{
+	font-size: 30px;
+	color: #94CFBE;
+}
+
+/* -------------------------Login/Register--------------------------- */
+#login {
+	font-family: 'Londrina Shadow', cursive;
+	font-weight: bold;
+	text-align: right;
+}
+
+/* --------------------------Main content ----------------------------*/
+.main{
+/*	text-align: center;*/
+}
+
+.main h1{
+	font-family: 'Londrina Shadow', cursive;
+}
